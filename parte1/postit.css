@@ -19,6 +19,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation-timing-function: linear;
+  animation-name: postitAppear;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
 }
 
 .yellow {
@@ -45,7 +49,7 @@
     rgb(184, 219, 184) 75%,
     rgb(146 180 146) 93%
   );
-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 h1 {
@@ -58,8 +62,25 @@ p {
   font-size: larger;
 }
 
-#container div:hover{
+#container div:hover {
   transform: rotate(0deg);
   transform: scale(1.1, 1.1);
   transition-duration: 0.2s;
+}
+
+@keyframes postitAppear {
+  from {
+    transform: scale(1.2, 1.2) rotate(0deg);
+  }
+  to {
+    .purple{
+      transform: rotate(-3deg) scale(1, 1);
+    }
+    .yellow{
+      transform: rotate(-2deg) scale(1, 1);
+    }
+    .green{
+      transform: rotate(4deg) scale(1, 1);
+    }
+  }
 }
